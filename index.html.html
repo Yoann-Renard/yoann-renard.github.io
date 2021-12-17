@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta name="author" content="Yoann Renard">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Fate : Vous n'allez rien comprendre</title>
+  <!-- Source vers le code CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <!-- Naviguation -->
+  <div id="Menu">
+    <!-- Menu de la naviguation -->
+    <ul id="MenuList">
+      <li class="MenuElements" id="Home" onclick="open_page('')"><a href="#">Home</a></li> <!-- Un élement du Menu -->
+
+      <li class="MenuElements" title="Personnages"  onmouseover="nav_open('personnages')" onmouseout="nav_close('personnages')"><a href="#">Personnages</a></li> <!-- Un élement du Menu -->
+      <!-- Déroulant de 'Personnages'-->
+          <ul class="deroulant" id="deroulant_personnages" onmouseover="nav_open('personnages')" onmouseout="nav_close('personnages')" ><script type="text/javascript">document.getElementById('deroulant_personnages').hidden=true;</script>
+            <li class="sousitem" title="Fate/Stay Night - Personnages" onmouseover="nav_open('perso_SN')" onmouseout="nav_close('perso_SN')"><a href="#">Fate/Stay Night</a></li>
+            <!-- Sous-Déroulant de 'Fate/Stay Night'-->
+            <ul class="deroulant" id="deroulant_perso_SN" onmouseover="nav_open('perso_SN')" onmouseout="nav_close('perso_SN')"> <script type="text/javascript">document.getElementById('deroulant_perso_SN').hidden=true;</script>
+              <li class="sousitem" onclick="open_page('./personnages/Fate_Stay_Night_Personnages.html')"><a href="#">Masters</a></li>
+              <li class="sousitem" onclick="open_page('./personnages/Fate_Stay_Night_Servants.html')"><a href="#">Servants</a></li>
+              <li class="sousitem" onclick="open_page('./personnages/Fate_Stay_Night_Secondaires.html')"><a href="#">Secondaires</a></li>
+            </ul>
+
+            <li class="sousitem"><a href="#">Fate/Zero</a></li>
+            <li class="sousitem"><a href="#">Fate/Grand Order</a></li>
+          </ul>
+
+      <li class="MenuElements" title="S&eacute;ries" onmouseover="nav_open('series')" onmouseout="nav_close('series')"><a href="#">S&eacute;ries</a></li> <!-- Un élement du Menu -->
+      <!-- Déroulant de 'Séries'-->
+        <ul class="deroulant" id="deroulant_series" onmouseover="nav_open('series')" onmouseout="nav_close('series')"> <script type="text/javascript">document.getElementById('deroulant_series').hidden=true;</script>
+          <li class="sousitem" title="Fate/Stay Night" onclick="open_page('./series/Serie_Fate_Stay_Night.html')"><a href="#">Fate/Stay Night</a></li>
+          <li class="sousitem" title="Fate/Zero" onclick="open_page('./series/Serie_Fate_Zero.html')"><a href="#">Fate/Zero</a></li>
+          <li class="sousitem" onclick="open_page('./series/Fate_Apocrypha.html')"><a href="#">Fate/Apocrypha</a></li>
+          <li class="sousitem" onclick="open_ytvideo('https://www.youtube.com/watch?v=wnVwcUhxt1k&ab_channel=Gigguk?autoplay=1&mute=1')"><a href="#">Ordre Chronologique</a></li>
+        </ul>
+
+      <li class="MenuElements"><a href="#">Jeux Vid&eacute;o</a></li> <!-- Un élement du Menu -->
+
+      <li class="MenuElements"><a href="#">Romans</a></li> <!-- Un élement du Menu -->
+
+      <li class="MenuElements"><a href="#">Mangas</a></li> <!-- Un élement du Menu -->
+
+      <!-- Petite Décoration -->
+      <li><a href="https://www.youtube.com/watch?v=dQ_d_VKrFgM" target="_blank"><img src="./images/gif/padoru.gif" alt="gif" id="padoru_gif" onmouseover="padoru_trigger()" onmouseout="padoru_untrigger()"></a></li>
+
+    </ul>
+  </div>
+
+
+  <!-- Liens externes sous forme d'images -->
+  <div class="Reseaux">
+    <ul id="ReseauxListe">
+      <li class="logos" title="Ufotable Twitter"> <a href="https://twitter.com/ufotable" target="_blank"><img src="./images/logos/twitter.png" alt="Twitter" id="Twitter_logo"></a> </li>
+      <li class="logos" title="Crunchyroll Fate/Zero"> <a href="https://www.crunchyroll.com/fr/fatezero" target="_blank"><img src="./images/logos/Crunchyroll.png" alt="Crunchyroll" id="Crunchyroll_logo"></a> </li>
+    </ul>
+
+    <ul id="ConnectionListe">
+      <li class="compte" id="Connection" onclick="compte_open_close('Connection_fen')"><a href="#">Connection</a></li>
+      <li class="compte" id="Créer" onclick="compte_open_close('Créer_fen')"><a href="#">Créer un compte</a></li>
+    </ul>
+  </div>
+
+  <div id="Connection_fen" > <script type="text/javascript">document.getElementById('Connection_fen').hidden=true;</script>
+    <h1><small><b>Connection</b></small></h1>
+    <form action="" method="post">
+      <label for="pseudo">Pseudo/Email :</label>
+      <input type="text" name="pseudo" value="" placeholder="exemple: eridio123..">
+
+      <label for="mdp">Mot de passe :</label>
+      <input type="text" name="mdp" value="" placeholder="">
+
+      <input type="submit" name="" value="Se connecter">
+    </form>
+  </div>
+
+  <div id="Créer_fen" >  <script type="text/javascript">document.getElementById('Créer_fen').hidden=true;</script>
+    <h1><small><b>Créer un compte</b></small></h1>
+    <form action="" method="post">
+      <label for="Email">Email :</label>
+      <input type="text" name="Email" value="" placeholder="123..@gmail.com">
+
+      <label for="pseudo">Pseudo :</label>
+      <input type="text" name="pseudo" value="" placeholder="eridio123..">
+
+      <label for="mdp" >Mot de passe :<sup title=>
+        <a href="#" style="color:#EEE" onmouseover="nav_open('mdp')" onmouseout="nav_close('mdp')">?</a></sup></label>
+          <div id="deroulant_mdp">  <script type="text/javascript">document.getElementById('deroulant_mdp').hidden=true;</script>
+            <p>Le mot de passe doit posséder au moins 8 lettres, 2 majuscules, 3 chiffres, 1 nombre premier, 4 espaces,
+               2 symboles chinois, un proverbe latin et un compte amazon prime.</p>
+          </div>
+
+      <input type="text" name="mdp" value="" placeholder="">
+
+      <label for="cmdp">Confirmez le mot de passe :</label>
+      <input type="text" name="cmdp" value="" placeholder="">
+
+      <input type="submit" name="" value="Créer le compte">
+    </form>
+  </div>
+
+
+  <div class="animation">
+    <img src="./images/personnages/Black_Shadow.png" alt="????" id="Black_Shadow" >
+    <div class="animation_ouverture">
+      למרות כל ההשפלה שספגת, אתה עדיין מסתפק בלהיות בובה של אלוהים?
+      פחד הוא על התחושה שתמות. המשמעות האמיתית של אימה אינה טמונה במצב סטטי, אלא בשינוי.
+      למרות כל ההשפלה שספגת, אתה עדיין מסתפק בלהיות בובה של אלוהים?
+      למרות כל ההשפלה שספגת, אתה עדיין מסתפק בלהיות בובה של אלוהים!!
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- iframes -->
+<div class="frameBox">
+  <iframe src="" id="frame"></iframe>
+  <iframe src="" id="ytframe"></iframe>
+</div>
+
+
+  <!-- Source vers le code Javascript -->
+  <script type="text/javascript" src="./js/js_events.js" charset="utf-8"></script>
+</body>
+</html>

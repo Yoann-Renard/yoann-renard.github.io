@@ -1,0 +1,185 @@
+
+/* Géneral */
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: system-ui;
+}
+
+body{
+  background: rgba(150, 150, 150,0.8);
+}
+
+header{
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+
+/* Class */
+.nom{
+  float: left;
+}
+.nomInfo{
+  font-size: 15px;
+}
+.perso{
+  float: left;
+  width: 99%;
+  border-bottom:2px solid black;
+}
+
+.desciption{
+}
+
+.source{
+  float: right;
+  font-size: 12px;
+}
+.logo_serie{
+  display: block;
+  margin-left: auto;  /* On centre l'image */
+  margin-right: auto; /*                   */
+  width: 15%;
+  height: auto;
+}
+
+/* Images Personnages */
+#Rin_Tosaka_img{
+  float:left;
+  width: 200px;
+  height: auto;
+}
+
+#Sakura_Matou_img{
+  float: left;
+  width: 150px;
+  height: auto;
+}
+#Shirou_Emiya_img{
+  float: left;
+  width: 200px;
+  height: auto;
+}
+#Saber_img{
+  float: left;
+  width: 300px;
+  height: auto;
+}
+
+#Archer_img{
+  float: left;
+  width: 200px;
+  height: auto;
+}
+
+#Illya_img{
+  float: left;
+  width: 200px;
+  height: auto;
+}
+
+#Kiritsugu_Emiya_img{
+  float: left;
+  width: 180px;
+  height: auto;
+}
+
+#Shinji_Matou_img{
+  float: left;
+  width: 120px;
+  height: auto;
+}
+
+#Sōichirō_Kuzuki_img{
+  float: left;
+  width: 140px;
+  height: auto;
+}
+
+#Kirei_Kotomine_img{
+  float: left;
+  width: 200px;
+  height: auto;
+}
+
+#Fujimura_Taiga_img{
+  float: left;
+  width: 180px;
+  height: auto;
+}
+
+#Zōken_Matō_img{
+  float: left;
+  width: 150px;
+  height: auto;
+}
+
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #222;
+}
+
+/* "Mode téléphone" */
+@media screen and (max-width: 1000px){
+
+  .logo_serie{
+    width: 30%;
+  }
+  #Rin_Tosaka_img{
+    width: 100px;
+  }
+
+  #Sakura_Matou_img{
+    width: 75px;
+  }
+  #Shirou_Emiya_img{
+    width: 100px;
+  }
+  #Saber_img{
+    width: 150px;
+  }
+
+  #Archer_img{
+    width: 100px;
+  }
+
+  #Illya_img{
+    width: 100px;
+  }
+
+  #Kiritsugu_Emiya_img{
+    width: 90px;
+  }
+
+  #Shinji_Matou_img{
+    width: 60px;
+  }
+
+  #Sōichirō_Kuzuki_img{
+    width: 70px;
+  }
+
+  #Kirei_Kotomine_img{
+    width: 100px;
+  }
+
+  #Fujimura_Taiga_img{
+    width: 90px;
+  }
+
+  #Zōken_Matō_img{
+    width: 75px;
+  }
+
+}
