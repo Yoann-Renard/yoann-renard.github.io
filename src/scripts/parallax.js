@@ -7,8 +7,49 @@ var slideDurationSetting = 600; //Amount of time for which slide is "locked"
 var currentSlideNumber = 0;
 var totalSlideNumber = $(".background").length;
 
+
+
+// ------------- FUNCTIONS ------------- //
+function scrollDown() {
+  //Down scroll
+  ticking = true;
+  if (currentSlideNumber !== totalSlideNumber - 1) {
+    currentSlideNumber++;
+    nextItem();
+  }
+  slideDurationTimeout(slideDurationSetting);
+}
+
+function scrollUp() {
+  //Up scroll
+  ticking = true;
+  if (currentSlideNumber !== 0) {
+    currentSlideNumber--;
+  }
+  previousItem();
+  slideDurationTimeout(slideDurationSetting);
+}
+
+
+// ------------- SWIPE HANDLER ------------- //
+
+import { detectswipe } from "./mobileHandler.js";
+
+function swipeHandler(el, d){
+  if (d == 'd') {
+    scrollUp()
+  }
+  if (d == 'u') {
+    scrollDown()
+  }
+}
+
+detectswipe("body", swipeHandler)
+
+detectswipe("body", )
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function parallaxScroll(evt) {
+  var delta
   if (isFirefox) {
     //Set delta for Firefox
     delta = evt.detail * (-120);
@@ -22,22 +63,10 @@ function parallaxScroll(evt) {
 
   if (ticking != true) {
     if (delta <= -scrollSensitivitySetting) {
-      //Down scroll
-      ticking = true;
-      if (currentSlideNumber !== totalSlideNumber - 1) {
-        currentSlideNumber++;
-        nextItem();
-      }
-      slideDurationTimeout(slideDurationSetting);
+      scrollDown()
     }
     if (delta >= scrollSensitivitySetting) {
-      //Up scroll
-      ticking = true;
-      if (currentSlideNumber !== 0) {
-        currentSlideNumber--;
-      }
-      previousItem();
-      slideDurationTimeout(slideDurationSetting);
+      scrollUp()
     }
   }
 }
