@@ -1,3 +1,4 @@
+@use "sass:math";
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 // ------------- MIXINS ------------- //
@@ -8,7 +9,7 @@
 // ------------- VARIABLES ------------- //
 $parallax-offset: 30vh;
 $content-offset: 40vh;
-$transition-speed: 1.1s;
+$transition-speed: 1s;
 $slide-number: 3;
 
 html, body {
@@ -44,9 +45,9 @@ html, body {
   }
   &:first-child {
     background-image: url(/res/backgrounds/1.jpg);
-    transform: translateY(-$parallax-offset / 2);
+    transform: translateY(math.div(-$parallax-offset , 2));
     .content-wrapper {
-      transform: translateY($parallax-offset /2);
+      transform: translateY(math.div($parallax-offset , 2));
     }
   }
   &:nth-child(2) {
@@ -88,9 +89,9 @@ html, body {
 // ------------- SET TRANSFORM VALUES ------------- //
 
 .background.up-scroll {
-  transform: translate3d(0,-$parallax-offset / 2,0);
+  transform: translate3d(0,math.div(-$parallax-offset , 2),0);
   .content-wrapper {
-    transform: translateY($parallax-offset / 2);
+    transform: translateY(math.div($parallax-offset , 2));
   }
   + .background {
     transform: translate3d(0,$parallax-offset,0);
@@ -106,9 +107,9 @@ html, body {
     transform: translateY($content-offset);
   }
   + .background:not(.down-scroll) {
-    transform: translate3d(0,-$parallax-offset / 2,0);
+    transform: translate3d(0,math.div(-$parallax-offset , 2),0);
       .content-wrapper {
-        transform: translateY($parallax-offset / 2);
+        transform: translateY(math.div($parallax-offset , 2));
       }
   }
 }
