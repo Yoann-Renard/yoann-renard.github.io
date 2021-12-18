@@ -46,7 +46,6 @@ function swipeHandler(el, d){
 
 detectswipe("body", swipeHandler)
 
-detectswipe("body", )
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function parallaxScroll(evt) {
   var delta
