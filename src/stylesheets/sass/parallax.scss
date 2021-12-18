@@ -8,13 +8,15 @@
 // ------------- VARIABLES ------------- //
 $parallax-offset: 30vh;
 $content-offset: 40vh;
-$transition-speed: 1.2s;
+$transition-speed: 1.1s;
 $slide-number: 3;
 
 html, body {
   overflow: hidden;
   padding: 0px;
   margin: 0px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .background {

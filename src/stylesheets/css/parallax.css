@@ -3,6 +3,8 @@ html, body {
   overflow: hidden;
   padding: 0px;
   margin: 0px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .background {
@@ -16,7 +18,7 @@ html, body {
   position: fixed;
   width: 100%;
   transform: translateY(30vh);
-  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+  transition: all 1.1s cubic-bezier(0.22, 0.44, 0, 1);
 }
 .background:before {
   content: "";
@@ -68,7 +70,7 @@ html, body {
   transform: translateY(40vh);
   will-change: transform;
   backface-visibility: hidden;
-  transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+  transition: all 1.6s cubic-bezier(0.22, 0.44, 0, 1);
 }
 .content-title {
   font-size: 12vh;
