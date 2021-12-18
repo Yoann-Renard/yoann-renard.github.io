@@ -1,1 +1,0 @@
-sass src\stylesheets\sass\parallax.scss src\stylesheets\css\parallax.css
