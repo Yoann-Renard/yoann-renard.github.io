@@ -39,24 +39,24 @@ html, body {
     background-color: rgba(0,0,0,.3);
   }
   &:first-child {
-    background-image: url(res/backgrounds/1.jpg);
+    background-image: url(/res/backgrounds/1.jpg);
     transform: translateY(-$parallax-offset / 2);
     .content-wrapper {
       transform: translateY($parallax-offset /2);
     }
   }
   &:nth-child(2) {
-    background-image: url(res/backgrounds/2.jpg);
+    background-image: url(/res/backgrounds/2.jpg);
   }
   &:nth-child(3) {
-    background-image: url(res/backgrounds/3.jpg);
+    background-image: url(/res/backgrounds/3.jpg);
   }
 }
 
 /* Set stacking context of slides */
 @for $i from 1 to ($slide-number + 1) {
     .background:nth-child(#{$i}) {
-        z-index: ($slide-number + 1) - $i; 
+        z-index: ($slide-number + 1) - $i;
     }
 }
 
