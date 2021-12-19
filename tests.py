@@ -7,6 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 import time
+import os
 
 ## INIT ##
 path = r'./chromedriver.exe'
@@ -33,11 +34,8 @@ urls = {
     'projects': 'http://127.0.0.1:5500/projects/',
     '': ''
 }
-driver.get(urls['projects'])
 
-## METHODES ##
-
-
+## GENERAL METHODES ##
 def WaitFor(methode, selector_type, element, timeout=10) -> bool:
     try:
         # wait for search results to be fetched
@@ -57,7 +55,9 @@ def CloseFirstTab():
     driver.switch_to.window(driver.window_handles[0])
 
 
+## TESTING METHODES ##
 def projectsTestScrolling() -> bool:
+    driver.get(urls['projects'])
     WaitFor(EC.presence_of_element_located, By.CSS_SELECTOR, '.background', 5)
 
     #### TEST SCROLLING DOWN ####
@@ -67,20 +67,18 @@ def projectsTestScrolling() -> bool:
         By.CSS_SELECTOR, '.down-scroll',
         2
     )
-    print(downIsOk)
 
-    time.sleep(1.5) # Wait animation
+    #time.sleep(1.5) # Wait animation
 
     #### TEST SCROLLING UP ####
-    driver.execute_script("window.testScrollUp")
+    """driver.execute_script("window.testScrollUp")
     upIsOk = not WaitFor(
         EC.presence_of_element_located,
         By.CSS_SELECTOR, '.down-scroll',
         2
-    )
-    print(upIsOk)
+    )"""
 
-    return True if upIsOk and downIsOk else False
+    return True if downIsOk else False
 
 
 if __name__ == '__main__':

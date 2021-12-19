@@ -31,7 +31,7 @@ function scrollUp() {
 }
 
 window.testSrollDown = scrollDown(); // Make both function global for testing
-window.testSrollUp = scrollUp();     //
+//window.testSrollUp = scrollUp();     //
 
 // ------------- SWIPE HANDLER ------------- //
 
