@@ -47,3 +47,4 @@ export function detectswipe(el, func) {
         swipe_det.eY = 0;
     }, false);
 }
+//# sourceMappingURL=mobileHandler.js.map
