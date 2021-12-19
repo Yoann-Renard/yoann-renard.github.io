@@ -30,6 +30,8 @@ function scrollUp() {
   slideDurationTimeout(slideDurationSetting);
 }
 
+window.testSrollDown = scrollDown(); // Make both function global for testing
+window.testSrollUp = scrollUp();     //
 
 // ------------- SWIPE HANDLER ------------- //
 
