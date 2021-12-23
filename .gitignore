@@ -1,2 +1,4 @@
 node_modules
 chromedriver.exe
+**__pycache__
+.vscode/
