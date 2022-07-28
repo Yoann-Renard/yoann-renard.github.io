@@ -71,6 +71,33 @@ function load(
     xhr.send(data);
 }
 
+
+function download(endpoint, type, filename, successListener, errorListener) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", API_URL + endpoint)
+    xhr.responseType = "arraybuffer";
+
+    xhr.onload = () => {
+        if (xhr.status === 201) {
+            let link = document.createElement('a') // create a clickable html element
+            link.download = filename // set the name of the file we'll download ( with extention name )
+
+            let blob = new Blob([xhr.response], {type: type})
+            link.href = URL.createObjectURL(blob) // make the href of the element point on blob's created URL
+            link.click() // open it
+            URL.revokeObjectURL(link.href) // clear it
+            successListener()
+        }else{
+            errorListener()
+        }
+        
+    }
+    if (TOKEN) {
+        xhr.setRequestHeader("Authorization", "Bearer " + TOKEN);
+    }
+    xhr.send()
+}
+
 /**
  * Link a form with the function that will handle the submit action.
  * @param {string} formId Id of the element.
