@@ -1,5 +1,5 @@
 const header = {
-  homepage: 'https://www.linkedin.com/in/yoann-renard/',
+  homepage: 'https://yoann-renard.github.io',
   title: 'YR.',
 }
 
@@ -62,7 +62,7 @@ const workExperiences = [
     name: 'Software Engineer, France',
     company: 'Thales Group',
     period: 'Oct 2022 - Jan 2024 (1+ years)',
-    description: 'I worked on the Google Search team.',
+    description: 'Cloud infratructure and APIs access control',
     stack: ['JavaScript', 'TypeScript', 'React'],
   },
 ]
@@ -90,7 +90,7 @@ const certifications = [
   {
     name: 'TOEIC Listening and Reading Test',
     institution: 'ETS EMEA',
-    period: '965/990', 
+    period: '965/990',
     description: 'Issued Dec 2021 · Expired Dec 2023',
   },
 ]
