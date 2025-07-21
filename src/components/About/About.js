@@ -15,11 +15,13 @@ const About = () => {
       )}
 
       {role && <h2 className='about__role'>A {role}.</h2>}
-      <p className='about__desc'>Over <b>3 years</b> of expertise in designing, developing, and managing <b>scalable cloud-native applications</b>. Specialized in cloud engineering, DevOps, and full-stack development, with international experience across <b>France</b> and <b>Singapore</b>. <b>Certified Google Professional Cloud Architect</b> with strong problem-solving, communication, and continuous improvement skills.</p>
+      <p className='about__desc' dangerouslySetInnerHTML={{ __html: description }} />
 
       <div className='about__contact center'>
         {resume && (
-          <a href={resume}>
+          <a href={resume}
+            target='_blank'
+            rel="noreferrer">
             <span type='button' className='btn btn--outline'>
               Resume
             </span>
@@ -31,6 +33,8 @@ const About = () => {
             {social.github && (
               <a
                 href={social.github}
+                target='_blank'
+                rel="noreferrer"
                 aria-label='github'
                 className='link link--icon'
               >
@@ -41,6 +45,8 @@ const About = () => {
             {social.linkedin && (
               <a
                 href={social.linkedin}
+                target='_blank'
+                rel="noreferrer"
                 aria-label='linkedin'
                 className='link link--icon'
               >

@@ -6,7 +6,9 @@ const header = {
 const about = {
   name: 'Yoann Renard',
   role: 'Software/Cloud Engineer',
-  resume: 'https://example.com',
+  description:
+    'Over <b>3 years</b> of expertise in designing, developing, and managing <b>scalable cloud-native applications</b>. Specialized in cloud engineering, DevOps, and full-stack development, with international experience across <b>France</b> and <b>Singapore</b>. <b>Certified Google Professional Cloud Architect</b> with strong problem-solving, communication, and continuous improvement skills.',
+  resume: '/res/resume.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/yoann-renard/',
     github: 'https://github.com/shellkah',
