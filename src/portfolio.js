@@ -20,7 +20,7 @@ const projects = [
     name: 'Foxytics',
     description:
       'Lightweight monitoring application for SMEs, offering real-time insights into user activities, errors, and geolocation.',
-    stack: ['Golang', 'GCP', 'React', 'Typescript', 'CI/CD'],
+    stack: ['Go', 'GCP', 'React', 'Typescript', 'CI/CD'],
     livePreview: 'https://dev.foxytics.io/',
     image: '/res/f.png',
   },
@@ -32,6 +32,14 @@ const projects = [
     sourceCode: 'https://github.com/Yoann-Renard/Chez-Lili-website',
     livePreview: 'https://chezlili.fr',
     image: '/res/c.png',
+  },
+  {
+    name: 'Goutte',
+    description:
+      'Thread-safe and type-safe cache implemented in Go. It provides fast point queries (Hashmap), precise TTLs (Heap-based) and auto eviction when the cache exceeds its capacity (LRU).',
+    stack: ['Go'],
+    sourceCode: 'https://github.com/shellkah/goutte',
+    image: '/res/goutte.png',
   },
 ]
 
